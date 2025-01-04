@@ -17,7 +17,9 @@ So when you changes the subnet group into another VPC, the console does not inst
 
 ![The main issue](/assets/img/posts/2025-01-05-image3.jpg)
 
-It turns out that while you can share VPC across account with AWS Resource Access Manager (RAM), the security groups created are not shared across account, so basically you will find permission issues regarding the default security group when applying this changes via console. It took me some time and an advice from my senior at work (thanks a lot btw) to actually attempt applying the configuration via AWS CLI. Using the command below, I ended up with a successful change of configuration within few seconds after applying the command.
+It turns out that while you can share VPC across account with AWS Resource Access Manager (RAM), the security groups created are not shared across account, so basically you will find permission issues regarding the default security group when applying this changes via console. So how to apply this change then, if the console refuses to show the new SGs while refusing to mount the default SG as well? 
+
+It took me some time and an advice from my senior at work (thanks a lot btw) to actually attempt applying the configuration via AWS CLI. Using the command below, I ended up with a successful change of configuration within few seconds after applying the command.
 
 ```bash
 aws rds modify-db-instance \
