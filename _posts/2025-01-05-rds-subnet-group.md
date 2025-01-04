@@ -1,6 +1,6 @@
 ---
 title: How to change RDS subnet group on shared account VPC?
-tags: aws, rds
+tags: aws rds
 categories: Cloud
 ---
 This is a problem I encountered while doing a project from a certain client, where we were supposed to do an enhancement of the VPC CIDRs which were excessively assigned from /16 to /24. However, the VPC were shared across another account using AWS Resource Access Manager (RAM) hence in order to perform an enhancement in the VPC CIDR, we need to move the workload of the two account sharing the VPC at the same time. As I moved the resource from the shared account via console, I ran across an issue, perhaps bug that ends up requiring me to explore the workarounds for related issue.
