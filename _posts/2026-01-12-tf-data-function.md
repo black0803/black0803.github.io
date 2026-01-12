@@ -1,6 +1,6 @@
 ---
 title: 'TF Chapter 2: Terraform Data Types & Basic Functions'
-updated: 2026-01-09 11:56:41Z
+updated: 2026-01-10 11:56:41Z
 created: 2025-11-11 09:33:58Z
 tags: terraform
 categories: terraform

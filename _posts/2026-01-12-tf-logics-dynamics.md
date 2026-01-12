@@ -1,6 +1,6 @@
 ---
 title: 'TF Chapter 3: Terraform Logics & Dynamics'
-updated: 2026-01-12 01:08:39Z
+updated: 2026-01-11 01:08:39Z
 created: 2025-11-13 09:35:01Z
 tags: terraform
 categories: terraform
