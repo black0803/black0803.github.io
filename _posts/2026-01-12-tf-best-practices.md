@@ -1,7 +1,6 @@
 ---
 title: 'TF Chapter 4: Terraform Best Practices'
-updated: 2026-01-12 04:00:00Z
-date: 2025-11-14 09:35:19Z
+date: 2026-01-12 09:35:23Z
 tags: terraform
 categories: terraform
 ---
