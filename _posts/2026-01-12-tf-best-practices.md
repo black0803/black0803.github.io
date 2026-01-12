@@ -1,10 +1,9 @@
 ---
-title: 'Chapter 4: Terraform Best Practices'
+title: 'TF Chapter 4: Terraform Best Practices'
 updated: 2026-01-12 04:00:00Z
-created: 2025-11-28 09:35:19Z
-latitude: -6.11882480
-longitude: 106.57566710
-altitude: 0.0000
+created: 2025-11-14 09:35:19Z
+tags: terraform
+categories: terraform
 ---
 
 # Chapter 4: Terraform Best Practices

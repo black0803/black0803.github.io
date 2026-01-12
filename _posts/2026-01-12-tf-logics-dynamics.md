@@ -1,10 +1,9 @@
 ---
-title: 'Chapter 3: Terraform Logics & Dynamics'
+title: 'TF Chapter 3: Terraform Logics & Dynamics'
 updated: 2026-01-12 01:08:39Z
-created: 2025-11-28 09:35:01Z
-latitude: -6.11882480
-longitude: 106.57566710
-altitude: 0.0000
+created: 2025-11-13 09:35:01Z
+tags: terraform
+categories: terraform
 ---
 
 # Chapter 3: Terraform Logics & Dynamics

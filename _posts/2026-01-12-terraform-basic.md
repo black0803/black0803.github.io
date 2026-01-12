@@ -1,10 +1,9 @@
 ---
-title: 'Chapter 1: Terraform Basic'
+title: 'TF Chapter 1: Terraform Basic'
 updated: 2026-01-09 16:28:32Z
 created: 2025-11-10 21:15:18Z
-latitude: -6.16832950
-longitude: 106.75884940
-altitude: 0.0000
+tags: terraform
+categories: terraform
 ---
 
 # Chapter 1: Terraform Basic

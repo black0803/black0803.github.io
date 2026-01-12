@@ -1,10 +1,9 @@
 ---
-title: 'Chapter 2: Terraform Data Types & Basic Functions'
+title: 'TF Chapter 2: Terraform Data Types & Basic Functions'
 updated: 2026-01-09 11:56:41Z
-created: 2025-11-28 09:33:58Z
-latitude: -6.11882480
-longitude: 106.57566710
-altitude: 0.0000
+created: 2025-11-11 09:33:58Z
+tags: terraform
+categories: terraform
 ---
 
 # Chapter 2: Terraform Data Types & Functions
