@@ -65,7 +65,7 @@ While some people are forcing to keep just one Terraform root module (and one st
 
 Below are a sample of how a proper Terraform directory might look. Keeping the root modules on `environment/{env}/{stage}` while modules stay on `modules/{env} (generic)` and `environment/{env}/modules (specific)` keeps the code clean and is personally my favourite structure for now.
 
-![5b3534ae25c5586af95386bfd86fde55.png](../_resources/5b3534ae25c5586af95386bfd86fde55.png)
+![5b3534ae25c5586af95386bfd86fde55.png](/assets/img/posts/5b3534ae25c5586af95386bfd86fde55.png)
 
 ## C. Naming Scheme
 There's not much to speak about this, but here's the basic guideline of how naming scheme in Terraform usually goes in the industry.

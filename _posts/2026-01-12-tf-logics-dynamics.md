@@ -161,9 +161,9 @@ In the second function, the condition is that `instance_count` should be between
 
 ## C. Dependency Handling
 As you may have observed in the previous sample lab, Terraform has a smart process to handle which resources go first or which resource goes later, with the concept called dependencies. Basically this is a mechanism for choosing the order of creation for resources, determining which resource has to be created before able to create the other resource, and which resources have interchangeability when it comes to the order. Terraform has an interesting command called `terraform graph` which can show the relationships between entities in a Terraform root module.
-![faea2ca2b666a2357b738e8a7df61be7.png](../_resources/faea2ca2b666a2357b738e8a7df61be7.png)
+![faea2ca2b666a2357b738e8a7df61be7.png](/assets/img/posts/faea2ca2b666a2357b738e8a7df61be7.png)
 This command outputs a text-based graph in DOT language, which is a standardized format used by GraphViz. There are various tools to visualize the graph (you can ask GPT about this), but here is an example of the dependency graph in Lab 1 script.
-![496420bd25d014054e524daa6be2fa40.png](../_resources/496420bd25d014054e524daa6be2fa40.png)
+![496420bd25d014054e524daa6be2fa40.png](/assets/img/posts/496420bd25d014054e524daa6be2fa40.png)
 As we can see, Terraform has recognized that `bastion_instance` depended on `bastion_profile` to be created, which in turns depended on `bastion_role` being created as well. On the other hand, it's also established that the ssm policy attachment depends on `bastion_role` as well. This means that regardless of the order of typing, Terraform will still always create `bastion_role` first, then create `bastion_profile` and the policy attachment, and once `bastion_profile` is created, only then will it create the bastion_instance. Also, observe that terraform_bucket does not have any arrows coming from/to the block. This means that it does not depends on anyone to be created, which means Terraform can create S3 bucket at any point of the time during the apply without breaking the process (which were the aim). This relationship is all handled by Terraform by seeing the attribute references one resource make to the other, which Terraform is plenty smart enough to solve the dependency map. This is called implicit dependencies, where by referencing attributes of another block it is automatically marked a "dependent resource"
 
 So far, we have seen how Terraform handled dependencies implicitly based on attribute references. However, what if we want to make sure that the policy has to be attached by the time `bastion_instance` is created? What if we want to make sure the S3 bucket is created beforehand due to the bastion (let's say) having the purpose to dump file to the bucket in the defined in the user_data (it's not, but let's just assume it is for the case)? That's where explicit dependencies comes in handy.
@@ -185,5 +185,5 @@ resource "aws_iam_role_policy_attachment" "bastion_role_ssm_policy_attachment" {
 ```
 
 Now look at the changes it does to the graph
-![7257fe13ef0317309e1eadcc69a45cf1.png](../_resources/7257fe13ef0317309e1eadcc69a45cf1.png)
+![7257fe13ef0317309e1eadcc69a45cf1.png](/assets/img/posts/7257fe13ef0317309e1eadcc69a45cf1.png)
 The explicit dependency added an arrow from `bastion_instance` to the policy attachment. This made sure that `bastion_instance` will never be created before the policy is attached properly, even with no attribute reference made from the policy attachment to `bastion_instance`.
